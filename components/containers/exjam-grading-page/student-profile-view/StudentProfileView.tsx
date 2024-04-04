@@ -1,6 +1,7 @@
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select'
+"use client"
 import Image from 'next/image'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const StudentProfileView = () => {
     return (
@@ -17,8 +18,19 @@ const StudentProfileView = () => {
                         </div>
                     </div>
                     <div className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex items-center  '>
-                        <Image src="/assets/images/animation 1.png" style={{ width: "100%", height: "100%" }} width={0} height={0} sizes='100wv' alt="Ranch Investor" />
-                        <Image src="/assets/images/animation 1.png" style={{ width: "100%", height: "100%" }} width={0} height={0} sizes='100wv' alt="Ranch Investor" className='mx-[-50px]' />
+                        <motion.div
+                            animate={{ x: 50 }}
+                            transition={{ ease: "linear", duration: 4, repeat: Infinity, repeatType: "reverse", }}
+                        >
+                            <Image src="/assets/images/animation 1.png" style={{ width: "100%", height: "100%" }} width={0} height={0} sizes='100wv' alt="Ranch Investor" />
+                        </motion.div>
+                        <motion.div
+                            animate={{ x: -50 }}
+                            transition={{ ease: "linear", duration: 4, repeat: Infinity, repeatType: "reverse", }}
+                        >
+                            <Image src="/assets/images/animation 1.png" style={{ width: "100%", height: "100%" }} width={0} height={0} sizes='100wv' alt="Ranch Investor" className='' />
+                        </motion.div>
+
                     </div>
 
                 </div>
