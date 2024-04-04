@@ -73,7 +73,7 @@ const Header = () => {
                                             <Image src="/assets/images/Ellipse 16.png" width={40} height={40} alt='logo' />
                                         </p>
                                     </DropdownMenuTrigger>
-                                    <DropdownMenuContent className="w-56">
+                                    <DropdownMenuContent className="w-56 bg-white">
                                         <DropdownMenuLabel>My Account</DropdownMenuLabel>
                                         <DropdownMenuSeparator />
                                         <DropdownMenuGroup>
